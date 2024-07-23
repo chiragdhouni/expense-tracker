@@ -10,6 +10,7 @@ class Db {
     await users
         .doc(userId)
         .set(data)
+        // ignore: avoid_print
         .then((value) => print('User Added'))
         .catchError((error) {
       showDialog(

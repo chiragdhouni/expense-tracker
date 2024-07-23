@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, use_build_context_synchronously
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +32,7 @@ class _AddTransactionFormState extends State<AddTransactionForm> {
       final User = FirebaseAuth.instance.currentUser;
       int timestamp = DateTime.now().millisecondsSinceEpoch;
       var amount = int.parse(amountEditController.text);
+      // ignore: unused_local_variable
       var title = titleEditController.text;
       DateTime date = DateTime.now();
 
@@ -129,7 +132,7 @@ class _AddTransactionFormState extends State<AddTransactionForm> {
                   }),
               DropdownButtonFormField(
                   value: type,
-                  items: [
+                  items: const [
                     DropdownMenuItem(child: Text('Credit'), value: 'credit'),
                     DropdownMenuItem(child: Text('debit'), value: 'debit'),
                   ],

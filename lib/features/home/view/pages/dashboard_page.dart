@@ -13,7 +13,7 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   int currentIndex = 0;
-  var pageViewList = const [
+  var pageViewList = [
     HomeScreen(),
     TransactionScreen(),
   ];

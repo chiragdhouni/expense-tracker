@@ -16,7 +16,7 @@ class AuthService {
       await db.addUser(data, context);
 
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Dashboard()));
+          context, MaterialPageRoute(builder: (context) => Dashboard()));
 
       return res;
     } catch (e) {
